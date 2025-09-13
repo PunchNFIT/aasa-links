@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "GB4FVRL8JR.com.threesixsixdegreefitechandsciinstitute.one",
+        "paths": [
+          "/verify/*"
+        ]
+      }
+    ]
+  }
+}

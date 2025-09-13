@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Redirecting…</title>
+<script>
+window.onload = function () {
+// 1. Grab query string and forward it into your app
+const query = window.location.search; // ?uid=xxx&token=yyy
+const appLink = "myapp://verify" + query;
+
+
+
+// 2. Try to open your app
+window.location.replace(appLink);
+
+
+
+// 3. Fallback: if app not installed, after 2s stay on web page or show message
+setTimeout(function () {
+document.body.innerHTML = `
+<h2>Couldn’t open the app</h2>
+<p>Please install <b>ONE AI App</b> from the App Store / Play Store.</p>
+`;
+}, 2000);
+};
+</script>
+</head>
+<body>
+<p>Redirecting to ONE AI App…</p>
+</body>
+</html>

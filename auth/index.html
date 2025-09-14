@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Redirecting to ONE AI App…</title>
+  <script>
+    window.onload = function () {
+      // 1. Grab query string (e.g. ?token=xxx)
+      const query = window.location.search; 
+      
+      // 2. Construct deep link into your app
+      const appLink = "myapp://auth" + query;
+
+      // 3. Try to open the app
+      window.location.replace(appLink);
+
+      // 4. Fallback: if app not installed, show message after 2s
+      setTimeout(function () {
+        document.body.innerHTML = `
+          <h2>Couldn’t open the app</h2>
+          <p>Please install <b>ONE AI App</b> from the App Store / Play Store and try again.</p>
+        `;
+      }, 2000);
+    };
+  </script>
+</head>
+<body>
+  <p>Redirecting to ONE AI App…</p>
+</body>
+</html>

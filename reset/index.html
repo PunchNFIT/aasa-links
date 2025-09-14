@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Redirecting…</title>
+  <script>
+    window.onload = function () {
+      // 1. Grab query string (?uid=xxx&token=yyy)
+      const query = window.location.search; 
+      
+      // 2. Construct your deep link
+      const appLink = "myapp://reset" + query;
+
+      // 3. Try to open your app
+      window.location.replace(appLink);
+
+      // 4. Fallback: show message if app not installed
+      setTimeout(function () {
+        document.body.innerHTML = `
+          <h2>Couldn’t open the ONE app</h2>
+          <p>Please install <b>ONE AI App</b> from the App Store or Google Play.</p>
+        `;
+      }, 2000);
+    };
+  </script>
+</head>
+<body>
+  <p>Redirecting to ONE AI App…</p>
+</body>
+</html>

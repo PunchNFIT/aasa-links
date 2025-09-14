@@ -7,7 +7,7 @@
         "paths": [
           "/verify/*",
           "/auth/*",
-          "/reset/*"
+          "/reset-password/*"
         ]
       }
     ]

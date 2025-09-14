@@ -5,7 +5,9 @@
       {
         "appID": "GB4FVRL8JR.com.threesixsixdegreefitechandsciinstitute.one",
         "paths": [
-          "/verify/*"
+          "/verify/*",
+          "/auth/*",
+          "/reset/*"
         ]
       }
     ]

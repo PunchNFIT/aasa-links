@@ -8,8 +8,8 @@
       // 1. Grab query string (?uid=xxx&token=yyy)
       const query = window.location.search; 
       
-      // 2. Construct your deep link
-      const appLink = "myapp://reset" + query;
+      // 2. Construct your deep link (now using reset-password)
+      const appLink = "myapp://reset-password" + query;
 
       // 3. Try to open your app
       window.location.replace(appLink);
